@@ -1,0 +1,9 @@
+body { background: #f8f9fa; }
+.map-card { height: 520px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+.card { background: #ffffff; }
+.legend { display:inline-block; width:18px; height:12px; margin-right:8px; border-radius:3px; }
+.legend.swatch.low { background:#00ff00; }
+.legend.swatch.medium { background:#ffff00; }
+.legend.swatch.high { background:#ff8800; }
+.legend.swatch.critical { background:#ff0000; }
+#recommendation { background:#fffef8; }

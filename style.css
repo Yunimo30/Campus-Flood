@@ -1,0 +1,68 @@
+/* Soft monochrome + calm accents */
+:root{
+  --bg:#f4f5f8;
+  --card:#ffffff;
+  --muted:#96a1ad;
+  --accent:#365a9b;
+  --green:#22c55e;
+  --amber:#fbbf24;
+  --orange:#f97316;
+  --red:#ef4444;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color:#222;
+  height:100vh;
+}
+
+.container{
+  display:grid;
+  grid-template-columns:260px 1fr 380px;
+  gap:14px;
+  height:100vh;
+  padding:12px;
+}
+
+/* cards */
+.card{
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(10,20,40,0.06);
+  padding:16px;
+  overflow:auto;
+}
+
+/* controls */
+.controls label{display:block;margin-top:10px;font-size:13px;color:var(--muted)}
+.controls input, .controls select{
+  width:100%; padding:8px; margin-top:6px; border-radius:8px; border:1px solid #e6e9ee;
+  font-size:14px;
+}
+.scenario-row{display:flex;gap:8px;margin-top:10px}
+.scenario-btn{flex:1;padding:8px;border-radius:8px;border:0;background:#394f83;color:#fff;cursor:pointer}
+.run-btn{margin-top:12px;padding:10px;border-radius:10px;border:0;background:var(--accent);color:#fff;cursor:pointer}
+
+/* map */
+.map-panel{display:flex;align-items:center;justify-content:center}
+#map{width:92%;height:72vh;border-radius:10px;border:1px solid #dfe6ef}
+
+/* results */
+.flood-table{width:100%;border-collapse:collapse;margin-bottom:12px}
+.flood-table th, .flood-table td{padding:8px;border-bottom:1px solid #eef2f6;text-align:left;font-size:14px}
+.badge{display:inline-block;padding:4px 8px;border-radius:8px;color:#fff;font-weight:600;font-size:13px}
+.badge.green{background:var(--green)}.badge.yellow{background:var(--amber);color:#222}.badge.orange{background:var(--orange)}.badge.red{background:var(--red)}
+
+.kpis{margin-top:12px;display:flex;flex-direction:column;gap:6px;font-size:14px;color:#263238}
+.small{font-size:12px;color:var(--muted);margin-top:10px}
+
+/* Resize charts inside the results panel */
+.results canvas {
+  width: 100% !important;
+  max-height: 250px;   /* caps the height */
+  height: 200px;       /* a good balance */
+}
+
